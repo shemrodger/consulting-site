@@ -111,12 +111,7 @@ function V2Hero() {
           Engineer the <em className="v2-em-cyan">culture.</em>
         </span>
         <span className="v2-line">
-          Ship a{" "}
-          <span className="v2-tenx">
-            10
-            <span className="v2-x">×</span>
-          </span>{" "}
-          result.
+          Deliver <span className="v2-tenx">uncommon</span> results.
         </span>
       </h1>
 
@@ -511,8 +506,15 @@ function V2Styles() {
 }
 .v2-tenx .v2-x {
   display: inline-block;
-  animation: v2spin 6s linear infinite;
   transform-origin: center;
+  animation:
+    v2xEntry  0.7s  cubic-bezier(0.34, 1.56, 0.64, 1)  0.32s  1        both,
+    v2xWobble 3.2s  ease-in-out                          1.02s  infinite both;
+  transition: transform 0.2s cubic-bezier(0.34, 1.56, 0.64, 1);
+}
+.v2-tenx:hover .v2-x {
+  animation-play-state: paused;
+  transform: rotate(45deg);
 }
 .v2-hero-sub {
   max-width: 720px;
@@ -1013,6 +1015,19 @@ function V2Styles() {
 }
 @keyframes v2spin {
   to { transform: rotate(360deg); }
+}
+@keyframes v2xEntry {
+  0%   { transform: scale(0) rotate(-20deg); }
+  60%  { transform: scale(1.15) rotate(375deg); }
+  80%  { transform: scale(0.95) rotate(355deg); }
+  100% { transform: scale(1)    rotate(360deg); }
+}
+@keyframes v2xWobble {
+  0%   { transform: rotate(0deg); }
+  20%  { transform: rotate(12deg); }
+  50%  { transform: rotate(-12deg); }
+  80%  { transform: rotate(10deg); }
+  100% { transform: rotate(0deg); }
 }
 @keyframes v2riseIn {
   from { opacity: 0; transform: translateY(40px); }
