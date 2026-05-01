@@ -216,7 +216,7 @@ function PortalStyles() {
 /* ─── Overlay ─────────────────────────────────────────────────────────────── */
 .portal {
   position: fixed; inset: 0; z-index: 9997;
-  display: flex; align-items: center; justify-content: center;
+  display: flex;
   padding: clamp(16px, 3vw, 32px);
   overflow-y: auto;
   background: rgba(5, 4, 8, 0.72);
@@ -241,12 +241,13 @@ function PortalStyles() {
 .portal-card {
   position: relative; z-index: 1;
   width: min(820px, 100%);
+  margin: auto;
   background: rgba(9, 8, 14, 0.88);
   backdrop-filter: blur(40px) saturate(0.4);
   -webkit-backdrop-filter: blur(40px) saturate(0.4);
   border: 1px solid rgba(245,243,238,0.10);
   border-radius: 24px;
-  padding: clamp(28px, 4.5vw, 48px);
+  padding: clamp(20px, 4.5vw, 48px);
   box-shadow:
     inset 0 0 0 1px rgba(255,255,255,0.03),
     0 50px 120px rgba(0,0,0,0.7);
@@ -515,6 +516,20 @@ function PortalStyles() {
   color: rgba(245,243,238,0.2); transition: color 0.2s;
 }
 .portal-skip-row button:hover { color: rgba(245,243,238,0.55); }
+
+/* ─── Mobile compaction ───────────────────────────────────────────────────── */
+@media (max-width: 540px) {
+  .portal-card { gap: 16px; }
+  .portal-bio { gap: 8px; }
+  .portal-prompt { gap: 6px; }
+  .portal-prompt-arrows { display: none; }
+  .portal-headline { font-size: clamp(18px, 5.5vw, 38px); }
+  .pchoice { padding: 14px 12px; gap: 8px; }
+  .pchoice-label { font-size: clamp(22px, 7vw, 44px); }
+  .pchoice-detail { font-size: 12px; }
+  .pchoice-actions { gap: 6px; }
+  .pchoice-enter, .pchoice-vote { padding: 8px 13px; font-size: 11px; }
+}
 
 /* ─── Animations ──────────────────────────────────────────────────────────── */
 @keyframes portal-bounce {
