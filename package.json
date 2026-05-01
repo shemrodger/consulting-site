@@ -2,6 +2,7 @@
   "name": "consulting-site",
   "private": true,
   "version": "1.0.0",
+  "packageManager": "yarn@4.9.1",
   "type": "module",
   "scripts": {
     "dev": "vite",
