@@ -25,13 +25,24 @@ export interface Env {
 const ALLOWED_ORIGINS = new Set([
   "https://shem-rodger.com",
   "https://www.shem-rodger.com",
+  "https://shem-rodger.pages.dev",
+  "https://consulting-site-637.pages.dev",
   // Local dev — remove these if you want to lock down tighter
   "http://localhost:5173",
   "http://localhost:4173",
 ]);
 
+function isAllowedOrigin(origin: string | null): origin is string {
+  return Boolean(
+    origin &&
+      (ALLOWED_ORIGINS.has(origin) ||
+        origin.endsWith(".shem-rodger.pages.dev") ||
+        origin.endsWith(".consulting-site-637.pages.dev"))
+  );
+}
+
 function corsHeaders(origin: string | null): Record<string, string> {
-  const allowed = origin && ALLOWED_ORIGINS.has(origin) ? origin : "null";
+  const allowed = isAllowedOrigin(origin) ? origin : "null";
   return {
     "Access-Control-Allow-Origin": allowed,
     "Access-Control-Allow-Methods": "GET, POST, OPTIONS",
