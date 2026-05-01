@@ -21,7 +21,10 @@ export default {
       },
       letterSpacing: {
         'widest-xl': '0.25em',
-      }
+      },
+      screens: {
+        'tall': { raw: '(min-height: 780px)' },
+      },
     },
   },
   plugins: [],

@@ -2,10 +2,10 @@ import { work } from "../content/siteContent";
 
 export default function Work() {
   return (
-    <section id="work" className="py-32 px-6 md:px-12 bg-paper">
+    <section id="work" className="py-16 md:py-24 lg:py-32 px-6 md:px-12 bg-paper">
       <div className="max-w-7xl mx-auto">
         {/* Section header */}
-        <div className="flex items-start gap-8 mb-20 pb-12 border-b border-ink/10">
+        <div className="flex items-start gap-8 mb-10 pb-8 md:mb-16 md:pb-10 lg:mb-20 lg:pb-12 border-b border-ink/10">
           <span className="font-mono-custom text-xs text-accent tracking-widest-xl uppercase mt-1 shrink-0">
             Work
           </span>

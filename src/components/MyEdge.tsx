@@ -2,10 +2,10 @@ import { myEdge } from "../content/siteContent";
 
 export default function MyEdge() {
   return (
-    <section id="my-edge" className="py-32 px-6 md:px-12 bg-paper-dark">
+    <section id="my-edge" className="py-16 md:py-24 lg:py-32 px-6 md:px-12 bg-paper-dark">
       <div className="max-w-7xl mx-auto">
         {/* Section header */}
-        <div className="flex items-start gap-8 mb-20 pb-12 border-b border-ink/10">
+        <div className="flex items-start gap-8 mb-10 pb-8 md:mb-16 md:pb-10 lg:mb-20 lg:pb-12 border-b border-ink/10">
           <span className="font-mono-custom text-xs text-accent tracking-widest-xl uppercase mt-1 shrink-0">
             Positioning
           </span>
@@ -42,7 +42,7 @@ export default function MyEdge() {
         </div>
 
         {/* Pull quote */}
-        <div className="mt-20 max-w-3xl mx-auto text-center">
+        <div className="mt-10 md:mt-16 lg:mt-20 max-w-3xl mx-auto text-center">
           <div className="font-display text-2xl md:text-3xl italic font-normal text-ink/70 leading-relaxed">
             "The constraint is never where you think it is. That's why the first step is always diagnosis — not delivery."
           </div>

@@ -4,7 +4,7 @@ export default function Hero() {
   const lines = hero.headline.split("\n");
 
   return (
-    <section className="relative min-h-screen flex flex-col justify-end pb-24 pt-32 px-6 md:px-12 overflow-hidden bg-paper">
+    <section className="relative min-h-svh flex flex-col justify-start tall:justify-end pb-10 pt-20 tall:pt-32 tall:pb-24 px-6 md:px-12 overflow-hidden bg-paper">
       {/* Background architectural lines */}
       <div className="absolute inset-0 pointer-events-none" aria-hidden>
         {/* Vertical rule — far right */}
@@ -18,7 +18,7 @@ export default function Hero() {
 
       <div className="relative max-w-7xl mx-auto w-full">
         {/* Eyebrow */}
-        <div className="flex items-center gap-4 mb-12 animate-fade-in opacity-0 delay-100">
+        <div className="flex items-center gap-4 mb-5 tall:mb-12 animate-fade-in opacity-0 delay-100">
           <span className="font-mono-custom text-xs text-accent tracking-widest-xl uppercase">
             {hero.eyebrow}
           </span>
@@ -26,7 +26,7 @@ export default function Hero() {
         </div>
 
         {/* Headline */}
-        <h1 className="font-display text-[clamp(3rem,8vw,7rem)] leading-[0.92] font-semibold text-ink mb-10 tracking-tight">
+        <h1 className="font-display text-[clamp(2.5rem,7vw,7rem)] leading-[0.92] font-semibold text-ink mb-4 tall:mb-10 tracking-tight">
           {lines.map((line, i) => (
             <span
               key={i}
@@ -44,7 +44,7 @@ export default function Hero() {
         </h1>
 
         {/* Subheadline + CTAs */}
-        <div className="grid md:grid-cols-2 gap-12 items-end">
+        <div className="grid md:grid-cols-2 gap-6 tall:gap-12 items-start tall:items-end">
           <p className="text-ink/60 text-lg leading-relaxed font-light max-w-md animate-fade-up opacity-0 delay-500">
             {hero.subheadline}
           </p>
@@ -66,7 +66,7 @@ export default function Hero() {
         </div>
 
         {/* Bottom rule with stat hints */}
-        <div className="mt-20 pt-8 border-t border-ink/10 grid grid-cols-3 gap-8 animate-fade-up opacity-0 delay-700">
+        <div className="mt-8 tall:mt-20 pt-8 border-t border-ink/10 grid grid-cols-3 gap-4 tall:gap-8 animate-fade-up opacity-0 delay-700">
           {[
             { value: "10+", label: "Years in high-performance systems" },
             { value: "NZ", label: "Based — available globally" },
@@ -84,8 +84,8 @@ export default function Hero() {
         </div>
       </div>
 
-      {/* Scroll indicator */}
-      <div className="absolute bottom-8 left-1/2 -translate-x-1/2 flex flex-col items-center gap-2 animate-fade-in opacity-0 delay-700">
+      {/* Scroll indicator — only on tall viewports where there's clear space */}
+      <div className="hidden tall:flex absolute bottom-8 left-1/2 -translate-x-1/2 flex-col items-center gap-2 animate-fade-in opacity-0 delay-700">
         <div className="w-px h-12 bg-ink/20 relative overflow-hidden">
           <div
             className="absolute top-0 w-full bg-accent"

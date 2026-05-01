@@ -2,10 +2,10 @@ import { howIWork } from "../content/siteContent";
 
 export default function HowIWork() {
   return (
-    <section id="process" className="py-32 px-6 md:px-12 bg-ink text-paper">
+    <section id="process" className="py-16 md:py-24 lg:py-32 px-6 md:px-12 bg-ink text-paper">
       <div className="max-w-7xl mx-auto">
         {/* Section header */}
-        <div className="flex items-start gap-8 mb-20 pb-12 border-b border-paper/10">
+        <div className="flex items-start gap-8 mb-10 pb-8 md:mb-16 md:pb-10 lg:mb-20 lg:pb-12 border-b border-paper/10">
           <span className="font-mono-custom text-xs text-accent tracking-widest-xl uppercase mt-1 shrink-0">
             Process
           </span>
@@ -58,7 +58,7 @@ export default function HowIWork() {
         </div>
 
         {/* ToC note */}
-        <div className="mt-20 pt-12 border-t border-paper/10 grid md:grid-cols-3 gap-8 items-start">
+        <div className="mt-10 pt-8 md:mt-16 md:pt-10 lg:mt-20 lg:pt-12 border-t border-paper/10 grid md:grid-cols-3 gap-8 items-start">
           <div className="md:col-span-2">
             <div className="font-mono-custom text-xs text-accent/50 uppercase tracking-widest mb-3">
               Methodology

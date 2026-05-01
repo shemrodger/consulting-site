@@ -2,10 +2,10 @@ import { whatIDo } from "../content/siteContent";
 
 export default function WhatIDo() {
   return (
-    <section id="what-i-do" className="py-32 px-6 md:px-12 bg-ink text-paper">
+    <section id="what-i-do" className="py-16 md:py-24 lg:py-32 px-6 md:px-12 bg-ink text-paper">
       <div className="max-w-7xl mx-auto">
         {/* Section header */}
-        <div className="flex items-start gap-8 mb-20 pb-12 border-b border-paper/10">
+        <div className="flex items-start gap-8 mb-10 pb-8 md:mb-16 md:pb-10 lg:mb-20 lg:pb-12 border-b border-paper/10">
           <span className="font-mono-custom text-xs text-accent tracking-widest-xl uppercase mt-1 shrink-0">
             Services
           </span>
