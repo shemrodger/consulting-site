@@ -1,0 +1,12 @@
+# Robots.txt for Shem Rodger Consulting Portfolio
+
+User-agent: *
+Allow: /
+Disallow: /node_modules/
+Disallow: *.map
+
+# Crawl delay (optional - adjust if needed)
+Crawl-delay: 1
+
+# Sitemap location
+Sitemap: https://shem-rodger.com/sitemap.xml

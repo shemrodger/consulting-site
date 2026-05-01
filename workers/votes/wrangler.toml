@@ -1,0 +1,10 @@
+name = "shem-votes"
+main = "index.ts"
+compatibility_date = "2024-01-01"
+
+# To create the KV namespace and get its ID, run:
+#   wrangler kv namespace create VOTES
+# Then paste the returned `id` value below.
+[[kv_namespaces]]
+binding = "VOTES"
+id = "94ff7dcfcfd645109ab45481acab7015"
