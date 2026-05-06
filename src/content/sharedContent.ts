@@ -1,23 +1,23 @@
-// ─────────────────────────────────────────────────────────────────────────────
-// SHARED CONTENT — used by V1 (editorial), V2 (fun), and the portal landing.
+// -----------------------------------------------------------------------------
+// SHARED CONTENT - used by V1 (editorial), V2 (fun), and the portal landing.
 // Edit identity / contact details here once. Both site versions stay in sync.
-// ─────────────────────────────────────────────────────────────────────────────
+// -----------------------------------------------------------------------------
 
 export const meta = {
   name: "Shem Rodger",
   title: "Performance Partner",
-  tagline: "Civil Construction · Digital Systems · Operational Clarity",
+  tagline: "Operations · Throughput · Execution Clarity",
   description:
-    "Performance partner for civil construction and operational businesses. Systems, throughput, and clarity.",
+    "Operational performance consultant specialising in constraint diagnosis, systems design, and execution improvement for project-based and operational businesses.",
 };
 
 export const contact = {
-  heading: "Start a conversation",
+  heading: "Work together",
   intro:
-    "If you have a messy operational problem, a system that's making life harder instead of easier, or a digital project that's gone sideways — I'd like to hear about it.",
-  cta: "The first conversation is free and takes 30 minutes. No pitch deck.",
-  email: "shemrodger@gmail.com", // ← replace
-  linkedin: "https://www.linkedin.com/in/shem-rodger-49379a2a/", // ← replace
+    "If you're dealing with an operational problem that's compounding, a system that's slowing execution, or a delivery environment that's losing ground — I'd like to hear about it.",
+  cta: "30 minutes. No deck. If there's a fit, we'll know quickly.",
+  email: "shemrodger@gmail.com",
+  linkedin: "https://www.linkedin.com/in/shem-rodger-49379a2a/",
   location: "New Zealand — available remotely",
 };
 

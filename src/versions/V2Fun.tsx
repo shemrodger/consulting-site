@@ -26,14 +26,14 @@ export default function V2Fun() {
       <V2Hero />
       <Marquee
         items={[
-          "Excellence",
-          "10X Results",
+          "Operational Clarity",
           "Find the Constraint",
-          "Build the Culture",
-          "Bold Execution",
-          "No Decks. Just Tools.",
           "Throughput > Activity",
-          "Elite Standards",
+          "Execution Quality",
+          "No Frameworks. Just Results.",
+          "Outcomes, Not Outputs",
+          "Raise the Standard",
+          "Root Cause, Not Symptoms",
         ]}
       />
       <V2Manifesto />
@@ -41,7 +41,7 @@ export default function V2Fun() {
       <Marquee
         accent
         items={[
-          "Diagnose · Simplify · Build · Measure · Coach",
+          "Diagnose · Redesign · Build · Measure · Coach · Embed",
           "One constraint. One focus. One leap.",
           "Performance is a system, not a slogan.",
         ]}
@@ -83,7 +83,7 @@ function V2Nav() {
         <a href="#edge">Edge</a>
         <a href="#how">How</a>
         <a href="#contact" className="v2-nav-cta">
-          Let's go →
+          Work together →
         </a>
       </div>
     </nav>
@@ -100,7 +100,7 @@ function V2Hero() {
 
       <div className="v2-hero-eyebrow">
         <span className="v2-pulse-dot" /> {hero.eyebrow.toUpperCase()} ·
-        BUILT IN NEW ZEALAND
+        NEW ZEALAND
       </div>
 
       <h1 className="v2-hero-headline">
@@ -108,18 +108,18 @@ function V2Hero() {
           Find the <em className="v2-em-pink">constraint.</em>
         </span>
         <span className="v2-line v2-line-shift">
-          Engineer the <em className="v2-em-cyan">culture.</em>
+          Redesign the <em className="v2-em-cyan">system.</em>
         </span>
         <span className="v2-line">
-          Deliver <span className="v2-tenx">uncommon</span> results.
+          Deliver <span className="v2-tenx">results.</span>
         </span>
       </h1>
 
       <p className="v2-hero-sub">
-        I'm a performance partner for civil construction and operational
-        businesses. We don't tinker — we find the one thing throttling your
-        throughput, build the system around it, and put the standard back
-        where it belongs:{" "}
+        Every business has a single limiting factor buried beneath layers of
+        symptoms. I find it, redesign around it, and build the clarity and
+        discipline to perform at the level the business demands —
+        the standard,{" "}
         <span className="v2-underline-wave">excellence</span>.
       </p>
 
@@ -311,11 +311,11 @@ function V2Contact() {
   return (
     <section id="contact" className="v2-contact">
       <div className="v2-contact-blob" />
-      <div className="v2-contact-tag">// LET'S BUILD SOMETHING THAT MOVES</div>
+      <div className="v2-contact-tag">// THE RIGHT PROBLEM FIRST</div>
       <h2 className="v2-contact-heading">
-        Ready to{" "}
+        One constraint is costing you a{" "}
         <span className="v2-contact-flash">10×</span>{" "}
-        the thing that's stuck?
+        outcome. Let's find it.
       </h2>
       <p className="v2-contact-intro">{contact.intro}</p>
       <p className="v2-contact-cta">{contact.cta}</p>
@@ -342,7 +342,7 @@ function V2Footer() {
         <div className="v2-footer-tag">{meta.tagline}</div>
       </div>
       <div className="v2-footer-mark">
-        © {new Date().getFullYear()} · Built bold.
+        © {new Date().getFullYear()} · No frameworks. Just results.
       </div>
     </footer>
   );

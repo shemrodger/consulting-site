@@ -29,11 +29,22 @@ export default function Work() {
               {/* Screenshot area */}
               <div className="aspect-video screenshot-placeholder border-b border-ink/10 relative overflow-hidden">
                 {project.screenshot ? (
-                  <img
-                    src={project.screenshot}
-                    alt={project.screenshotAlt}
-                    className="w-full h-full object-cover"
-                  />
+                  project.screenshot.endsWith(".mp4") ? (
+                    <video
+                      src={project.screenshot}
+                      autoPlay
+                      muted
+                      loop
+                      playsInline
+                      className="w-full h-full object-cover"
+                    />
+                  ) : (
+                    <img
+                      src={project.screenshot}
+                      alt={project.screenshotAlt}
+                      className="w-full h-full object-cover"
+                    />
+                  )
                 ) : (
                   <div className="absolute inset-0 flex items-center justify-center">
                     <div className="text-center">
