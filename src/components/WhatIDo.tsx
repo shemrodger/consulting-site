@@ -1,45 +1,51 @@
 import { whatIDo } from "../content/siteContent";
 
+const cardStyles = [
+  "bg-paper text-ink",
+  "bg-ink-soft text-paper",
+  "bg-paper text-ink",
+  "bg-cobalt text-paper",
+  "bg-paper text-ink",
+];
+
 export default function WhatIDo() {
   return (
-    <section id="what-i-do" className="py-16 md:py-24 lg:py-32 px-6 md:px-12 bg-ink text-paper">
+    <section id="what-i-do" className="py-6 md:py-8 px-4 md:px-6 bg-ink">
       <div className="max-w-7xl mx-auto">
         {/* Section header */}
-        <div className="flex items-start gap-8 mb-10 pb-8 md:mb-16 md:pb-10 lg:mb-20 lg:pb-12 border-b border-paper/10">
-          <span className="font-mono-custom text-xs text-accent tracking-widest-xl uppercase mt-1 shrink-0">
-            Services
-          </span>
+        <div className="bento-card bg-ink-soft flex flex-col md:flex-row md:items-end justify-between gap-6 p-8 md:p-10 mb-4 md:mb-5">
           <div>
-            <h2 className="font-display text-[clamp(2.5rem,5vw,4.5rem)] font-semibold leading-tight text-paper mb-6">
+            <span className="font-label text-xs text-accent tracking-widest-xl uppercase">
+              Services
+            </span>
+            <h2 className="font-display text-[clamp(2rem,4.5vw,3.5rem)] font-extrabold leading-[1.02] text-paper mt-4">
               {whatIDo.heading}
             </h2>
-            <p className="text-paper/50 text-lg leading-relaxed max-w-2xl font-light">
-              {whatIDo.intro}
-            </p>
           </div>
+          <p className="text-paper/50 text-base leading-relaxed max-w-md font-light">
+            {whatIDo.intro}
+          </p>
         </div>
 
-        {/* Services grid */}
-        <div className="space-y-0">
+        {/* Services bento grid */}
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-4 md:gap-5">
           {whatIDo.services.map((service, i) => (
             <div
               key={service.number}
-              className={`group grid md:grid-cols-[120px_1fr_1fr] gap-6 md:gap-12 py-10 border-b border-paper/10 hover:bg-paper/3 transition-colors duration-300 ${
-                i === 0 ? "border-t border-paper/10" : ""
+              className={`bento-card bento-card--hover p-8 md:p-10 flex flex-col ${cardStyles[i % cardStyles.length]} ${
+                i === 0 ? "md:col-span-2" : ""
               }`}
             >
-              {/* Number */}
-              <div className="font-mono-custom text-sm text-accent/60 group-hover:text-accent transition-colors duration-300 pt-1">
-                {service.number}
+              <div className="flex items-center justify-between mb-6">
+                <span className="font-label text-sm opacity-50">
+                  {service.number}
+                </span>
+                <div className="w-2.5 h-2.5 rounded-full bg-accent" />
               </div>
-
-              {/* Title */}
-              <h3 className="font-display text-xl md:text-2xl font-semibold text-paper leading-snug">
+              <h3 className="font-display text-xl md:text-2xl font-bold leading-snug mb-4">
                 {service.title}
               </h3>
-
-              {/* Body */}
-              <p className="text-paper/50 text-base leading-relaxed font-light">
+              <p className="text-base leading-relaxed font-light opacity-70">
                 {service.body}
               </p>
             </div>

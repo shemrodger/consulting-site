@@ -2,13 +2,13 @@ import { footer, contact } from "../content/siteContent";
 
 export default function Footer() {
   return (
-    <footer className="py-12 px-6 md:px-12 bg-ink text-paper border-t border-paper/10">
-      <div className="max-w-7xl mx-auto flex flex-col md:flex-row items-start md:items-center justify-between gap-6">
+    <footer className="pt-2 pb-6 md:pb-8 px-4 md:px-6 bg-ink">
+      <div className="max-w-7xl mx-auto bento-card bg-ink-soft flex flex-col md:flex-row items-start md:items-center justify-between gap-6 p-8">
         <div>
-          <div className="font-display text-lg font-semibold text-paper mb-1">
+          <div className="font-display text-lg font-extrabold text-paper mb-1">
             {footer.name}
           </div>
-          <div className="font-mono-custom text-xs text-paper/30">
+          <div className="font-label text-xs text-paper/35">
             {footer.tagline}
           </div>
         </div>
@@ -16,7 +16,7 @@ export default function Footer() {
         <div className="flex flex-col md:flex-row items-start md:items-center gap-6">
           <a
             href={`mailto:${contact.email}`}
-            className="font-mono-custom text-xs text-paper/40 hover:text-paper/70 transition-colors"
+            className="font-label text-xs text-paper/45 hover:text-paper/75 transition-colors"
           >
             {contact.email}
           </a>
@@ -24,11 +24,19 @@ export default function Footer() {
             href={contact.linkedin}
             target="_blank"
             rel="noopener noreferrer"
-            className="font-mono-custom text-xs text-paper/40 hover:text-paper/70 transition-colors"
+            className="font-label text-xs text-paper/45 hover:text-paper/75 transition-colors"
           >
             LinkedIn
           </a>
-          <div className="font-mono-custom text-xs text-paper/20">
+          <a
+            href={contact.substack}
+            target="_blank"
+            rel="noopener noreferrer"
+            className="font-label text-xs text-paper/45 hover:text-paper/75 transition-colors"
+          >
+            Substack
+          </a>
+          <div className="font-label text-xs text-paper/25">
             © {footer.year}
           </div>
         </div>

@@ -327,6 +327,9 @@ function V2Contact() {
         <a className="v2-btn v2-btn-ghost" href={contact.linkedin} target="_blank" rel="noopener noreferrer">
           LinkedIn
         </a>
+        <a className="v2-btn v2-btn-ghost" href={contact.substack} target="_blank" rel="noopener noreferrer">
+          Substack
+        </a>
       </div>
       <div className="v2-contact-loc">{contact.location}</div>
     </section>
@@ -341,6 +344,14 @@ function V2Footer() {
         <div className="v2-footer-name">{meta.name}</div>
         <div className="v2-footer-tag">{meta.tagline}</div>
       </div>
+      <a
+        href={contact.substack}
+        target="_blank"
+        rel="noopener noreferrer"
+        className="v2-footer-link"
+      >
+        Substack
+      </a>
       <div className="v2-footer-mark">
         © {new Date().getFullYear()} · No frameworks. Just results.
       </div>
@@ -998,6 +1009,8 @@ function V2Styles() {
 }
 .v2-footer-name { color: var(--ink); font-weight: 700; }
 .v2-footer-tag { margin-top: 4px; }
+.v2-footer-link { color: var(--muted); transition: color 0.2s ease; }
+.v2-footer-link:hover { color: var(--ink); }
 
 /* ── Animations ─────────────────────────────────────────────────────────── */
 @keyframes v2pulse {

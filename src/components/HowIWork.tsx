@@ -2,90 +2,75 @@ import { howIWork } from "../content/siteContent";
 
 export default function HowIWork() {
   return (
-    <section id="process" className="py-16 md:py-24 lg:py-32 px-6 md:px-12 bg-ink text-paper">
+    <section id="process" className="py-6 md:py-8 px-4 md:px-6 bg-paper">
       <div className="max-w-7xl mx-auto">
         {/* Section header */}
-        <div className="flex items-start gap-8 mb-10 pb-8 md:mb-16 md:pb-10 lg:mb-20 lg:pb-12 border-b border-paper/10">
-          <span className="font-mono-custom text-xs text-accent tracking-widest-xl uppercase mt-1 shrink-0">
-            Process
-          </span>
+        <div className="bento-card bg-ink flex flex-col md:flex-row md:items-end justify-between gap-6 p-8 md:p-10 mb-4 md:mb-5">
           <div>
-            <h2 className="font-display text-[clamp(2.5rem,5vw,4.5rem)] font-semibold leading-tight text-paper mb-6">
+            <span className="font-label text-xs text-accent tracking-widest-xl uppercase">
+              Process
+            </span>
+            <h2 className="font-display text-[clamp(2rem,4.5vw,3.5rem)] font-extrabold leading-[1.02] text-paper mt-4">
               {howIWork.heading}
             </h2>
-            <p className="text-paper/45 text-lg leading-relaxed max-w-2xl font-light">
-              {howIWork.intro}
-            </p>
           </div>
+          <p className="text-paper/50 text-base leading-relaxed max-w-md font-light">
+            {howIWork.intro}
+          </p>
         </div>
 
-        {/* Steps — horizontal flow on desktop */}
-        <div className="relative">
-          {/* Connecting line (desktop) */}
-          <div className="hidden md:block absolute top-8 left-[calc(2.5rem+1px)] right-0 h-px bg-paper/10" aria-hidden />
-
-          <div className="grid md:grid-cols-5 gap-0 md:gap-0">
-            {howIWork.steps.map((step, i) => (
-              <div
-                key={step.number}
-                className={`relative group py-8 md:py-0 ${
-                  i > 0 ? "border-t md:border-t-0 md:border-l border-paper/10" : ""
-                }`}
-              >
-                <div className="md:px-8 md:pt-16">
-                  {/* Number with accent dot */}
-                  <div className="flex items-center gap-3 mb-6">
-                    <div className="relative">
-                      <div className="w-4 h-4 rounded-full border border-paper/30 flex items-center justify-center group-hover:border-accent transition-colors duration-300">
-                        <div className="w-1.5 h-1.5 rounded-full bg-paper/30 group-hover:bg-accent transition-colors duration-300" />
-                      </div>
-                    </div>
-                    <span className="font-mono-custom text-xs text-accent/60 group-hover:text-accent transition-colors duration-300">
-                      {step.number}
-                    </span>
-                  </div>
-
-                  <h3 className="font-display text-lg font-semibold text-paper leading-snug mb-4">
-                    {step.title}
-                  </h3>
-                  <p className="text-paper/45 text-sm leading-relaxed font-light">
-                    {step.body}
-                  </p>
+        {/* Steps — bento row */}
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-5 gap-4 md:gap-5">
+          {howIWork.steps.map((step, i) => (
+            <div
+              key={step.number}
+              className={`bento-card bento-card--hover p-7 md:p-8 flex flex-col ${
+                i === howIWork.steps.length - 1 ? "bg-cobalt text-paper" : "bg-ink-soft text-paper"
+              }`}
+            >
+              <div className="flex items-center gap-3 mb-6">
+                <div className="w-8 h-8 rounded-full bg-paper/10 flex items-center justify-center">
+                  <span className="font-label text-xs">{step.number}</span>
                 </div>
               </div>
-            ))}
-          </div>
+
+              <h3 className="font-display text-lg font-bold leading-snug mb-3">
+                {step.title}
+              </h3>
+              <p className="text-sm leading-relaxed font-light opacity-65">
+                {step.body}
+              </p>
+            </div>
+          ))}
         </div>
 
         {/* ToC note */}
-        <div className="mt-10 pt-8 md:mt-16 md:pt-10 lg:mt-20 lg:pt-12 border-t border-paper/10 grid md:grid-cols-3 gap-8 items-start">
-          <div className="md:col-span-2">
-            <div className="font-mono-custom text-xs text-accent/50 uppercase tracking-widest mb-3">
+        <div className="grid md:grid-cols-3 gap-4 md:gap-5 mt-4 md:mt-5">
+          <div className="bento-card bg-paper-dark p-8 md:p-10 md:col-span-2">
+            <div className="font-label text-xs text-accent uppercase tracking-widest mb-3">
               Methodology
             </div>
-            <p className="text-paper/40 text-base leading-relaxed font-light">
+            <p className="text-ink/60 text-base leading-relaxed font-light">
               This process is grounded in Theory of Constraints — the idea that every system has exactly one constraint limiting its throughput. Anything not addressing that constraint is wasted effort. The goal is to find it fast, fix it, then find the next one.
             </p>
           </div>
-          <div className="hidden md:block">
-            <div className="border border-paper/10 p-6">
-              <div className="font-mono-custom text-xs text-accent/50 uppercase tracking-widest mb-4">
-                Not this engagement type:
-              </div>
-              <ul className="space-y-2">
-                {[
-                  "6-month strategy reports",
-                  "Vendor selection spreadsheets",
-                  "Readiness assessments that go nowhere",
-                  "Decks written for a boardroom",
-                ].map((item) => (
-                  <li key={item} className="flex items-start gap-2 text-xs text-paper/30 font-light">
-                    <span className="text-paper/20 mt-0.5">—</span>
-                    {item}
-                  </li>
-                ))}
-              </ul>
+          <div className="bento-card bg-ink p-8 md:p-10">
+            <div className="font-label text-xs text-accent uppercase tracking-widest mb-4">
+              Not this engagement type:
             </div>
+            <ul className="space-y-2.5">
+              {[
+                "6-month strategy reports",
+                "Vendor selection spreadsheets",
+                "Readiness assessments that go nowhere",
+                "Decks written for a boardroom",
+              ].map((item) => (
+                <li key={item} className="flex items-start gap-2 text-xs text-paper/45 font-light">
+                  <span className="text-paper/25 mt-0.5">—</span>
+                  {item}
+                </li>
+              ))}
+            </ul>
           </div>
         </div>
       </div>

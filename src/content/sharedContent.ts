@@ -18,6 +18,7 @@ export const contact = {
   cta: "30 minutes. No deck. If there's a fit, we'll know quickly.",
   email: "shemrodger@gmail.com",
   linkedin: "https://www.linkedin.com/in/shem-rodger-49379a2a/",
+  substack: "https://shemro.substack.com/",
   location: "New Zealand — available remotely",
 };
 
