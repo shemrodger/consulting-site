@@ -17,7 +17,7 @@ const thinking = [
 export default function App() {
   return <div className="personal-site">
     <a className="skip-link" href="#main">Skip to content</a>
-    <header className="personal-nav"><a className="wordmark" href="#">{meta.name}<span>Performance & transformation</span></a><nav aria-label="Main navigation"><a href="#focus">Focus</a><a href="#work">Work</a><a href="#experience">Experience</a><a href="#contact">Get in touch ↗</a></nav></header>
+    <header className="personal-nav"><a className="wordmark" href="#">{meta.name}<span>Performance & transformation</span></a><nav aria-label="Main navigation"><a href="#focus">Focus</a><a href="#work">Work</a><a href="#experience">Experience</a><a href={contact.substack} target="_blank" rel="noreferrer">Writing ↗</a><a href="#contact">Get in touch ↗</a></nav></header>
     <main id="main">
       <section className="personal-hero" aria-labelledby="hero-title">
         <div className="hero-heading tile"><p className="eyebrow">Shem Rodger / New Zealand</p><h1 id="hero-title">I improve how organisations perform.</h1><p className="hero-intro">I work across transformation, operations and technology to find constraints, improve flow and build better ways of working.</p><a className="text-link" href="#work">Explore my work ↗</a></div>
@@ -32,6 +32,6 @@ export default function App() {
       <section id="experience" className="personal-section experience-section"><div><p className="eyebrow">05 / Experience</p><h2>Performance,<br/>from the inside.</h2><a className="text-link" href={contact.linkedin} target="_blank" rel="noreferrer">Full experience on LinkedIn ↗</a></div><div className="experience-copy"><p className="experience-lede">My background spans elite cycling coaching, operational delivery and building software.</p><p>As an Olympic medal-winning cycling coach, I worked with the detail behind performance: preparation, feedback, decisions and the conditions people need to do their best work.</p><p>In operational environments, that attention turns to how work moves through a business. I connect the people, processes and technology involved, and stay close enough to help make the changes happen.</p><div className="experience-tags"><span>Elite sport</span><span>Operational improvement</span><span>Product & technology</span></div></div></section>
       <section id="contact" className="personal-contact tile"><p className="eyebrow">A project. A role. A conversation.</p><h2>What are you<br/>working through?</h2><div className="contact-bottom"><p>I’m interested in work where I can help an organisation perform better — through a focused project or as part of the team.</p><a href={`mailto:${contact.email}`}>{contact.email} ↗</a></div></section>
     </main>
-    <footer className="personal-footer"><span>© {new Date().getFullYear()} {meta.name}</span><span>Based in New Zealand · Working across borders</span><a href={contact.linkedin} target="_blank" rel="noreferrer">LinkedIn ↗</a></footer>
+    <footer className="personal-footer"><span>© {new Date().getFullYear()} {meta.name}</span><span>Based in New Zealand · Working across borders</span><span><a href={contact.substack} target="_blank" rel="noreferrer">Substack ↗</a> <a href={contact.linkedin} target="_blank" rel="noreferrer">LinkedIn ↗</a></span></footer>
   </div>;
 }
